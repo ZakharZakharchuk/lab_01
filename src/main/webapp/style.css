@@ -22,12 +22,12 @@ h1 {
 }
 
 .btn {
-    display: inline-block; /* Строчно-блочный элемент */
-    background: #4D6B82; /* цвет фона    #5557BA*/
-    color: #fff; /* Белый цвет текста */
-    padding: 1rem 1.5rem; /* Поля вокруг текста */
-    text-decoration: none; /* Убираем подчёркивание */
-    border-radius: 10px; /* Скругляем уголки */
+    display: inline-block;
+    background: #4D6B82;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
     font-size: 15px;
 }
 

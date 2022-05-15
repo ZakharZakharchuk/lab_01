@@ -10,17 +10,13 @@ import java.io.PrintWriter;
 @WebServlet(name = "GroupServlet", value = "/GroupServlet")
 public class GroupServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1><a href=\"title.html\" class=\"btn\">На головну</a></h1>");
-        out.println("<h1>Захар Захарчук, Вадим Заславський, Катерина Падусенко</h1>");
-        out.println("</body></html>");
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        try(PrintWriter out = response.getWriter()) {
+            out.println("<html><body>");
+            out.println("<h1><a href=\"title.html\" class=\"btn\">На головну</a></h1>");
+            out.println("<h1>Захар Захарчук, Вадим Заславський, Катерина Падусенко</h1>");
+            out.println("</body></html>");
+        }
     }
 }
